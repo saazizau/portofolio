@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Jabodetabek Home Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main id="main">
+    <header></header>
+    <!-- Include your prediction section here -->
+    <section id="house-prediction" class="house-prediction">
+      <form id="prediction-form" onsubmit="predictHouse(); return false;">
+      <div class="container">
+        <h2 class="section-title">Jabodetabek House Prediction</h2>
+        <h4 style="color: red;" class="section-title">Mohon Maaf, API Untuk Akses Model Sedang Bermasalah</h4>
+        <div class="row gy-4">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="lokasi">Lokasi:</label>
+                <select id="lokasi" name="lokasi">
+                  <option value="Bogor">Bogor</option>
+                  <option value="Tangerang">Tangerang</option>
+                  <option value="Depok">Depok</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sertifikat">Sertifikat:</label>
+                <select id="sertifikat" name="sertifikat">
+                  <option value="hgb">Hak Guna Bangunan</option>
+                  <option value="shm">Sertifikat Hak Milik</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="luas-tanah">Luas Tanah:</label>
+                <input type="number" id="luas-tanah" name="luasTanah" placeholder="Masukkan luas tanah">
+              </div>
+              <div class="form-group">
+                <label for="luas-bangunan">Luas Bangunan:</label>
+                <input type="number" id="luas-bangunan" name="luasBangunan" placeholder="Masukkan luas bangunan">
+              </div>
+              <div class="form-group">
+                <label for="banyak-lantai">Banyak Lantai:</label>
+                <input type="number" id="banyak-lantai" name="banyakLantai" placeholder="Masukkan banyak lantai">
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label for="banyak-kamar">Banyak Kamar:</label>
+                <input type="number" id="banyak-kamar" name="banyakKamar" placeholder="Masukkan banyak kamar">
+              </div>
+              <div class="form-group">
+                <label for="banyak-kamar-mandi">Banyak Kamar Mandi:</label>
+                <input type="number" id="banyak-kamar-mandi" name="banyakKamarMandi" placeholder="Masukkan banyak kamar mandi">
+              </div>
+              <div class="form-group">
+                <label for="carports">Banyak Carports:</label>
+                <input type="number" id="carports" name="carports" placeholder="Masukkan banyak carports">
+              </div>
+              <div class="form-group">
+                <label for="ada-tidaknya-property">Ada Tidaknya Property:</label>
+                <select id="ada-tidaknya-property" name="adaTidaknyaProperty">
+                  <option value="unfurnished">Unfurnished</option>
+                  <option value="semi furnished">Semi Furnished</option>
+                  <option value="furnished">Furnished</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="kondisi-property">Kondisi Property:</label>
+                <select id="kondisi-property" name="kondisiProperty">
+                  <option value="tidak baik">Tidak baik</option>
+                  <option value="baik">Baik</option>
+                  <option value="sangat baik">Sangat baik</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <button type="submit">Prediksi Rumah</button>
+            </div>
+
+            <div class="col-lg-12 result" id="result"></div>
+            <div id="loading-indicator">
+              <div id="loading-spinner"></div>
+              <p>Loading...</p>
+          </div>
+          </div>
+
+
+        </div>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>&copy; 2023 <a href="https://www.localhost">www.localhost</a>. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </main>
+
+</body>
+
+</html>
